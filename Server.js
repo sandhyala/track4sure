@@ -77,7 +77,7 @@ mongoose.connect(connString); // connect to our database
  
 //app.listen(80);
 //http.createServer(app).listen(process.env.port, function() {
-   http.createServer(app).listen(8080, function() {
+   http.createServer(app).listen(80, function() {
     MongoClient.connect(connString, function (err, database) {
         if (err) {
             return console.error('Unable to connect to the mongoDB server. Error:', err);
