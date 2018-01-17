@@ -32,7 +32,7 @@ var configDB = require('./config/database.js');
 	//app.use(flash()); // use connect-flash for flash messages stored in session
 
 //});
-var connString = "mongodb://localhost:27017";
+var connString = "mongodb://lsgpsdb:Yq193njoAJSwVPWMU4IHHInH0eyEuF66oWosb9FSduDajoRza9LAefImTHwb8FulUZcUw31pnX5gpifFMEHqDA==@lsgpsdb.documents.azure.com:10255/?ssl=true&replicaSet=globaldb";
 var db;
 var dbRetval;
 var MongoClient = mongodb.MongoClient;
