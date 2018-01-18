@@ -51,7 +51,7 @@ var db = new Db('ls_gpsdatabase', server); */
 //var connString = "mongodb://lsgpsdata:x2Av2IpUW9zaaUaEhvyExbL00iFq43WNjV3P4Gcd56R7r3oG1vGM0PeWq7t2Ou2DCqeAbYTAMX4RUBmjZB166g==@lsgpsdata.documents.azure.com:10255/?ssl=true";
 
 // configuration ===============================================================
-mongoose.connect(connString); // connect to our database
+mongoose.connect(connString,{useMongoClient: true}); // connect to our database
 
 /*MongoClient.connect(connString, function (err, database) {
     if (err) {
@@ -78,20 +78,14 @@ mongoose.connect(connString); // connect to our database
 //app.listen(80);
 //http.createServer(app).listen(process.env.port, function() {
    http.createServer(app).listen(80, function() {
-    MongoClient.connect(connString,{
-  useMongoClient: true,
-  connectTimeoutMS: 1000
-}, function (err, database) {
+    MongoClient.connect(connString,{useMongoClient: true}, function (err, database) {
         if (err) {
             return console.error('Unable to connect to the mongoDB server. Error:', err);
         } 
         db = database;
         console.log("Connected to 'ls_gpsdatabase' database");
     });
-    MongoClientForRet.connect(connString,{
-  useMongoClient: true,
-  connectTimeoutMS: 1000
-}, function (err, database) {
+    MongoClientForRet.connect(connString,{useMongoClient: true}, function (err, database) {
         if (err) {
             return console.error('Unable to connect to the mongoDB server. Error:', err);
         } 
