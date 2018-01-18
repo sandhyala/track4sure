@@ -18,7 +18,7 @@ module.exports = {
 	'googleAuth' : {
 		'clientID' 		: '117163683510-g54tc2kl4mla1uocm3dp7v6kj7620h6b.apps.googleusercontent.com',
 		'clientSecret' 	: '4irciCkFNEZrR4hA5hXNVN1L',
-		'callbackURL' 	: 'http://localhost:8080/auth/google/callback'
+		'callbackURL' 	: 'http://track4sure.southindia.cloudapp.azure.com:8080/auth/google/callback'
 	}
 
 };
