@@ -26,7 +26,8 @@ var configDB = require('./config/database.js');
 	//app.set('view engine', 'ejs'); // set up ejs for templating
 
 	// required for passport
-	app.use(expressSession({ secret: 'lsgpserver', cookie: { maxAge: 60000 }})); // session secret
+	app.use(expressSession({ secret: 'lsgpserver',resave: true,
+    saveUninitialized: true, cookie: { maxAge: 60000 }})); // session secret
 	app.use(passport.initialize());
 	app.use(passport.session()); // persistent login sessions
 	//app.use(flash()); // use connect-flash for flash messages stored in session
