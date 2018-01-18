@@ -81,14 +81,14 @@ mongoose.connect(connString,{useMongoClient: true}); // connect to our database
    http.createServer(app).listen(80, function() {
     MongoClient.connect(connString,{useMongoClient: true}, function (err, database) {
         if (err) {
-            return console.error('Unable to connect to the mongoDB server. Error:', err);
+            return console.log('Unable to connect to the mongoDB server. Error:', err);
         } 
         db = database;
         console.log("Connected to 'ls_gpsdatabase' database");
     });
     MongoClientForRet.connect(connString,{useMongoClient: true}, function (err, database) {
         if (err) {
-            return console.error('Unable to connect to the mongoDB server. Error:', err);
+            return console.log('Unable to connect to the mongoDB server. Error:', err);
         } 
         dbRetval = database;
         console.log("Connected to 'ls_gpsdatabase' database");
